@@ -32,7 +32,7 @@ enum SdkDownload {
     }
   }
 
-  final static SDK_VERSION_MAJOR = 24.2;
+  final static SDK_VERSION_MAJOR = "24.3.4";
 
   final Logger log = Logging.getLogger SdkDownload
   final String suffix
@@ -45,7 +45,8 @@ enum SdkDownload {
 
   /** Download the SDK to {@code temp} and extract to {@code dest}. */
   void download(File dest) {
-    def url = "http://dl.google.com/android/android-sdk_r$SDK_VERSION_MAJOR-$suffix.$ext"
+    //def url = "http://dl.google.com/android/android-sdk_r$SDK_VERSION_MAJOR-$suffix.$ext"
+    def url = "http://nexus-int.eng.jiveland.com/content/repositories/thirdparty/android/sdk/$SDK_VERSION_MAJOR/sdk-$SDK_VERSION_MAJOR-$suffix.$ext"
     log.debug "Downloading SDK from $url."
 
     File temp = new File(dest.getParentFile(), 'android-sdk.temp')
