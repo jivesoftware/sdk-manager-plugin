@@ -59,7 +59,7 @@ dependencies {
 }
 
 group = 'com.jakewharton.sdkmanager'
-version = '1.2.0-jive1'
+version = '1.2.0-jive2'
 
 install {
   repositories.mavenInstaller {
@@ -85,7 +85,7 @@ modifyPom {
       connection 'scm:git:git://github.com/JakeWharton/sdk-manager-plugin.git'
       developerConnection 'scm:git:ssh://git@github.com/JakeWharton/sdk-manager-plugin.git'
     }
-
+ 
     licenses {
       license {
         name 'The Apache Software License, Version 2.0'
@@ -93,7 +93,7 @@ modifyPom {
         distribution 'repo'
       }
     }
-
+ 
     developers {
       developer {
         id 'jakewharton'
@@ -104,3 +104,10 @@ modifyPom {
   }
 }
 
+
+
+nexus {
+    repositoryUrl 'http://nexus-int.eng.jiveland.com/content/repositories/modified-thirdparty'
+    snapshotRepositoryUrl 'http://nexus-int.eng.jiveland.com/content/repositories/modified-thirdparty'
+    sign false
+}
