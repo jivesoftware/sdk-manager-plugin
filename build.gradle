@@ -59,7 +59,7 @@ dependencies {
 }
 
 group = 'com.jakewharton.sdkmanager'
-version = '1.2.0-jive2'
+version = '1.2.0-jive3'
 
 install {
   repositories.mavenInstaller {
